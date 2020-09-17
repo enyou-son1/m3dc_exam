@@ -15,6 +15,9 @@
 	<script src="{{asset('js/jquery.validate.min.js')}}"></script>
 	<script src="{{asset('js/util-ui.js')}}"></script>
 
+    <!-- "php artisan config:cache"を実行 -->
+    <title>{{ config('defaultcfg.defaultcfg.PAGE_TITLE') }}</title>
+
 </head>
 
 <body>
@@ -22,6 +25,9 @@
          <nav class="navbar navbar-default navbar-fixed-top">
           <div class="container">
             <div class="navbar-header">
+                <div class="navbar-logo">
+                    {{ config('defaultcfg.defaultcfg.M3DC_LOG_TXT') }}
+                </div>
             </div>
 
             <div id="patern03" class="collapse navbar-collapse">

@@ -10,4 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', '');
+
+Route::group(['prefix' => ''], function () {
+    Route::get('/', 'InputController@index');
+    Route::post('/viewpage', 'InputController@displayview');
+
+    Route::get('/viewpage', function () {
+        return redirect('/');
+    });
+});
